@@ -1,0 +1,625 @@
+*
+{
+    margin:0 ;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-image: url(i7-transformed.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+a, a:hover{
+    text-decoration: none;
+}
+nav
+{
+    background:#2547A1 ;
+    height: 44px;
+    padding: 5px 20px;
+    display:flex;
+    align-items: center;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav a{
+    color: white;
+    font-size: 16px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.logo
+{
+    flex: 1;
+}
+.logo a 
+{
+display: flex;
+align-items: center;
+font-size: 20px;
+}
+
+
+.logo img{
+    width: 40px;
+    height: auto;
+    margin-right: 10px;
+    border-radius: 50%;
+
+}
+.menu{
+    display: flex;
+    align-items: center;
+    list-style: none;
+}
+.menu li
+{
+    padding: 15px 10px;
+    font-size: 15px;
+}
+
+@media screen and (max-width:600px) {
+         nav{
+            display: block;
+            position: relative;
+            padding: 15px 12px;
+         }
+
+         .menu{
+            margin-top: 15px;
+            display: none;
+         }
+         .searchbox{
+
+         }
+}
+.logo .heading
+{
+    font-size: 20px;
+    color:white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+nav .heading:hover{
+    color: black;
+    transition: 2s;
+    border-color: black;
+    box-shadow: black;
+}
+nav .menu :hover{
+    color: black;
+    transition: 0.01s;
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color:#2547A1;
+    color:
+    min-width: 100px;
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.dropdown-content li {
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+nav .searchbox
+{
+    flex: 1;
+    position: relative;
+}
+.searchbox input{
+    width: 100%;
+    height: 27px;
+    border: none;
+    outline: none;
+    background: navy;
+    border-radius:50px;
+    color:2547A1;
+    font-size: 16px;
+    text-align: center;
+    padding-left: 5px;
+    padding-right: 40px;
+    padding-top: 5px;
+    padding-bottom: 5PX;
+    margin-bottom: 5px;
+}
+.searchbox button
+{
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    border-radius: 50px;
+    border: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: scale(0,9);
+    background:whitesmoke
+}
+i{
+    color: aqua;
+    cursor: pointer;
+}
+.searchbox input{
+    flex: 1;
+    position: relative;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 20px;
+    padding: 20px;
+}
+/*  for styling h1*/
+h1{
+    font-style: bold;
+    text-decoration: underline;
+}
+/*  for styling h2*/
+h2{
+    color: rgb(54, 53, 51);
+}
+/*  for styling paragraph*/
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* card ko style krne ke lie */
+.space {
+    height: 600px;
+    background-color: transparent;
+}
+
+.space .container{
+  width:100%;
+  height: 100%;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.space .cube{
+  width:200px;
+  height: 200px;
+  position: relative;
+  transform-style: preserve-3d;
+  animation: cube-rotate infinite 5s linear; 
+  animation-play-state: paused;
+}
+
+.cube:not(:hover){
+  animation-play-state: running;
+}
+
+.side{
+  left:0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: transform 0.4s;
+  border:1px solid #2547A1;
+  background-image: radial-gradient(circle,rgb(255, 0, 34) 0%,violet 50%,purple 100%);
+}
+
+.side:hover{
+  background-color: rgba(0,255,0,0.05);
+}
+
+
+.front{
+  background-size: contain;
+  transform:translateZ(100px);
+  background-image: url(images/logo.jpg)
+}
+
+.left{
+  transform:rotateY(-90deg) translateZ(100px);
+  background-image: url(images/logo.jpg);
+}
+
+.back{
+  transform:rotateY(180deg) translateZ(100px);
+  background-image: url(images/logo.jpg);
+}
+
+.right{
+  transform:rotateY(90deg) translateZ(100px);
+  background-image: url(images/logo.jpg);
+}
+
+.top{
+  transform:rotateX(90deg) translateZ(100px);
+  background-image: url(images/logo.jpg);
+}
+
+.bottom{
+  transform:rotateX(-90deg) translateZ(100px);
+  background-image: url(images/logo.jpg);
+}
+
+.cube:hover .front{
+  transform:translateZ(150px);
+  background-image: url(images/logo.jpg);
+}
+.cube:hover .left{
+  transform:rotateY(-90deg) translateZ(150px);
+}
+
+.cube:hover .back{
+  transform:rotateY(180deg) translateZ(150px);
+}
+
+.cube:hover .right{
+  transform:rotateY(90deg) translateZ(150px);
+}
+
+.cube:hover .top{
+  transform:rotateX(90deg) translateZ(150px);
+}
+
+.cube:hover .bottom{
+  transform:rotateX(-90deg) translateZ(150px);
+}
+@keyframes cube-rotate{
+  from{
+      transform: rotate3d(1,1,1,0deg);
+  }
+
+  to{
+      transform: rotate3d(1,-1,1,360deg);
+  }
+}
+
+
+.ray{
+    display: flex;
+    justify-content: center;
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:white;
+    width: 100%;
+    height: 48px;
+    background-color:#2547A1;
+    align-items: center;
+}
+
+.footer {
+    background-color: navy;
+    color: white;
+    position: relative;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .footer .heading {
+    color: white;
+    max-width: 1010px;
+    width: 90%;
+    text-transform: uppercase;
+    margin: 0 auto;
+    margin-bottom: 3rem;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  .footer .content {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 1.5rem;
+  }
+  
+  .footer .content p {
+    margin-bottom: 1.3rem;
+    margin-top: 3px;
+  }
+
+  .footer .content a {
+    text-decoration: none;
+    color: white;
+  }
+
+  .footer .content a:hover {
+    border-bottom: 1px solid #971717;
+  }
+  
+  .footer .content h4 {
+    margin-bottom: 1.3rem;
+    font-size: 15px;
+    margin-top: 10px;
+  }
+  
+  footer {
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  footer hr {
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 767px) {
+    .footer .content {
+      display: flex;
+      flex-direction: column;
+      font-size: 14px;
+    }
+  
+    .footer {
+      position: unset;
+    }
+  }
+  
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .footer .content,
+    .footer {
+      font-size: 14px;
+    }
+  }
+  
+  @media (orientation: landscape) and (max-height: 500px) {
+    .footer {
+      position: unset;
+    }
+  }
+.responsive
+{
+    width: 350px;
+    height: 300px;
+}
+/* Styles for flip cards */
+.flipcard1 {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Define the depth of the 3D effect */
+  margin: 20px;
+  margin-top: 2PX;
+}
+
+.flipcard1-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D transforms maintain perspective */
+}
+
+.flipcard1:hover .flipcard1-inner {
+  transform: rotateY(180deg); /* Flip on Y-axis when hovered */
+}
+
+.flipcard1-front, .flipcard1-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side initially */
+}
+
+.flipcard1-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipcard1-back {
+  background-color: #2547A1;
+  color: white;
+  transform: rotateY(180deg); /* Start the back side flipped */
+}
+/*SECOND*/
+.flipcard2 {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Define the depth of the 3D effect */
+  margin: 20px;
+  margin-top: 2PX;
+}
+
+.flipcard2-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D transforms maintain perspective */
+}
+
+.flipcard2:hover .flipcard2-inner {
+  transform: rotateY(180deg); /* Flip on Y-axis when hovered */
+}
+
+.flipcard2-front, .flipcard2-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side initially */
+}
+
+.flipcard2-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipcard2-back {
+  background-color: #2547A1;
+  color: white;
+  transform: rotateY(180deg); /* Start the back side flipped */
+}
+
+/*THIRD*/
+.flipcard3 {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Define the depth of the 3D effect */
+  margin: 20px;
+  margin-top: 2PX;
+}
+
+.flipcard3-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D transforms maintain perspective */
+}
+
+.flipcard3:hover .flipcard3-inner {
+  transform: rotateY(180deg); /* Flip on Y-axis when hovered */
+}
+
+.flipcard3-front, .flipcard3-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side initially */
+}
+
+.flipcard3-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipcard3-back {
+  background-color: #2547A1;
+  color: white;
+  transform: rotateY(180deg); /* Start the back side flipped */;
+}
+.container2 .flipcard1, .flipcard2, .flipcard3
+{
+  display: inline-block;
+  width: 375px;
+}
+/*------*/
+/* fourth*/
+.flipcard4 {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Define the depth of the 3D effect */
+  margin: 20px;
+  margin-top: 2PX;
+}
+
+.flipcard4-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D transforms maintain perspective */
+}
+
+.flipcard4:hover .flipcard4-inner {
+  transform: rotateY(180deg); /* Flip on Y-axis when hovered */
+}
+
+.flipcard4-front, .flipcard4-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side initially */
+}
+
+.flipcard4-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipcard4-back {
+  background-color: #2547A1;
+  color: white;
+  transform: rotateY(180deg); /* Start the back side flipped */
+}
+/*fith*/
+.flipcard5 {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Define the depth of the 3D effect */
+  margin: 20px;
+  margin-top: 2PX;
+}
+
+.flipcard5-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D transforms maintain perspective */
+}
+
+.flipcard5:hover .flipcard5-inner {
+  transform: rotateY(180deg); /* Flip on Y-axis when hovered */
+}
+
+.flipcard5-front, .flipcard5-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side initially */
+}
+
+.flipcard5-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipcard5-back {
+  background-color: #2547A1;
+  color: white;
+  transform: rotateY(180deg); /* Start the back side flipped */
+}
+
+/*sixth*/
+.flipcard6 {
+  background-color: transparent;
+  width: 200px;
+  height: 200px;
+  perspective: 1000px; /* Define the depth of the 3D effect */
+  margin: 20px;
+  margin-top: 2PX;
+}
+
+.flipcard6-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d; /* Ensure 3D transforms maintain perspective */
+}
+
+.flipcard6:hover .flipcard6-inner {
+  transform: rotateY(180deg); /* Flip on Y-axis when hovered */
+}
+
+.flipcard6-front, .flipcard6-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden; /* Hide the back side initially */
+}
+
+.flipcard6-front {
+  background-color: #bbb;
+  color: black;
+}
+
+.flipcard6-back {
+  background-color: #2547A1;
+  color: white;
+  transform: rotateY(180deg); /* Start the back side flipped */;
+}
+.container00 .flipcard4, .flipcard5, .flipcard6
+{
+  display: inline-block;
+  width: 375px;
+}
