@@ -496,7 +496,7 @@ p{
   display: inline-block;
   width: 375px;
   text-align: center;
-  justify-content: center;  
+  justify-content: space-evenly;
 }
 /*------*/
 /* fourth*/
@@ -625,5 +625,5 @@ p{
   display: inline-block;
   width: 375px;
   text-align: center;
-  justify-content: center;  
+  justify-content: space-evenly;
 }
