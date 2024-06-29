@@ -213,37 +213,37 @@ p{
 .front{
   background-size: contain;
   transform:translateZ(100px);
-  background-image: url(images/logo.jpg)
+  background-image: url(logo.jpg)
 }
 
 .left{
   transform:rotateY(-90deg) translateZ(100px);
-  background-image: url(images/logo.jpg);
+  background-image: url(logo.jpg);
 }
 
 .back{
   transform:rotateY(180deg) translateZ(100px);
-  background-image: url(images/logo.jpg);
+  background-image: url(logo.jpg);
 }
 
 .right{
   transform:rotateY(90deg) translateZ(100px);
-  background-image: url(images/logo.jpg);
+  background-image: url(logo.jpg);
 }
 
 .top{
   transform:rotateX(90deg) translateZ(100px);
-  background-image: url(images/logo.jpg);
+  background-image: url(logo.jpg);
 }
 
 .bottom{
   transform:rotateX(-90deg) translateZ(100px);
-  background-image: url(images/logo.jpg);
+  background-image: url(logo.jpg);
 }
 
 .cube:hover .front{
   transform:translateZ(150px);
-  background-image: url(images/logo.jpg);
+  background-image: url(logo.jpg);
 }
 .cube:hover .left{
   transform:rotateY(-90deg) translateZ(150px);
