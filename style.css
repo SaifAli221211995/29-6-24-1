@@ -624,4 +624,6 @@ p{
 {
   display: inline-block;
   width: 375px;
+  text-align: center;
+  justify-content: center;  
 }
